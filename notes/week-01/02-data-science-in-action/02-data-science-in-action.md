@@ -243,7 +243,7 @@ anim <- tbl_names_top_100_female_trends |>
 gganimate::animate(anim, fps = 5, width = 600, height = 800)
 ```
 
-<img src="https://i.imgur.com/9aWmyES.gif" width="100%" style="display: block; margin: auto;" />
+<img src="img/visualize-data-1.gif" width="100%" style="display: block; margin: auto;" />
 
 Here’s what the code does step by step:
 
