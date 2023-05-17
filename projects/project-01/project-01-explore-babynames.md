@@ -237,8 +237,8 @@ plot_trends_in_name <- function(my_name) {
     # Add labels (title, x, y)
     labs(
       title = glue::glue("Babies named {my_name} across the years!"),
-      x = 'Number of Births',
-      y = 'Year'
+      x = 'Year',
+      y = 'Number of Births'
     ) +
     # Update plot theme
     theme(plot.title.position = "plot")
@@ -349,14 +349,14 @@ tbl_names_by_letter |>
   # Add a column layer using `geom_col()`
   geom_col() +
   # Facet wrap plot by sex
-  facet_wrap(~sex)+
+  facet_wrap(~sex,scales="free_y")+
   # Add labels (title, subtitle, x, y)
   
   labs(
     title="Distribution of births by first letter for the year 2020",
     subtitle=" The most popular first letter for females were A and for males J",
     x="First Letter",
-    y=" Number of Births"
+    y=" Percentage of Births"
   ) +
     
   # Fix scales of y axis
@@ -567,7 +567,7 @@ tbl_names_vowel_consonant |>
   # Add an area layer with fill = first_last
   geom_area(aes(fill=first_last))+
   # Facet wrap plot by `sex`
-  facet_wrap(~sex)+
+  facet_wrap(~sex,scales="free_y")+
   # Add labels (title, subtitle, caption, x, y)
   labs(
     title="Trends in usage of Vowels and consonants in baby names over time",
