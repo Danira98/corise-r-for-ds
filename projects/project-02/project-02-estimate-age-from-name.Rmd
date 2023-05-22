@@ -7,7 +7,7 @@ output: github_document
 library(tidyverse)
 knitr::opts_chunk$set(
   echo = TRUE,
-  eval = FALSE,
+  eval = TRUE,
   collapse = TRUE,
   comment = "#>",
   fig.path = "img/",
@@ -381,15 +381,15 @@ tbl_names_extended_age |>
       xend = x75_percent, 
       yend = name 
     ),
-    color = "darkorange",
+    color = "lightblue",
     linewidth = 5
   ) +
   # Add a point layer:
-  geom_point(size = 2, color = "darkred") +
+  geom_point(size = 2, color = "darkgreen") +
   # Add labels (title, subtitle, x, y)
   labs(
-    title = "Percentiles of the Top 25 Female Names with their Median Age",
-    subtitle = "___",
+    title = "Percentiles of the Top 25 Female Names with their Age Median",
+    subtitle = "Emily has the youngest age median, while Betty has the highest age median",
     x = "Age Median",
     y = "Name"
   ) +
