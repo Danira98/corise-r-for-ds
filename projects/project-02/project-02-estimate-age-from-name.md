@@ -290,6 +290,7 @@ estimate_age_stats <- function(tbl) {
 tbl_names_extended |> 
   # Filter for Gertrude/F
   dplyr::filter(name == "Gertrude", sex == "F") |>
+  #dplyr::filter(name=="William",sex=="M")|>
   # Estimate age stats
   estimate_age_stats()
 ```
@@ -420,7 +421,7 @@ tbl_names_extended_age |>
   geom_point(size = 2, color = "darkred") +
   # Add labels (title, subtitle, x, y)
   labs(
-    title = "Percentiles of names and the median age",
+    title = "Percentiles of the Top 25 Female Names with their Median Age",
     subtitle = "___",
     x = "Age Median",
     y = "Name"
